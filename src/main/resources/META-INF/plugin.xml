@@ -17,6 +17,7 @@
                                implementationClass="com.olegstotsky.etchosts.EtcHostsParserDefinition"/>
         <lang.syntaxHighlighterFactory language="EtcHosts"
                                        implementationClass="com.olegstotsky.etchosts.EtcHostsSyntaxHighlighterFactory"/>
+        <lang.commenter language="EtcHosts" implementationClass="com.olegstotsky.etchosts.EtcHostsCommenter"/>
     </extensions>
 
     <actions>
