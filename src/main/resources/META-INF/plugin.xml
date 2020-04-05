@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>org.example.EtcHostsPlugin</id>
+    <name>/etc/hosts/ support</name>
+    <vendor email="ostotsky@gmail.com">Oleg Stotsky</vendor>
+
+    <description>Language Support for /etc/hosts. Use with care!</description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="/etc/hosts file" implementationClass="com.olegstotsky.EtcHostsFileType"
+                  fieldName="INSTANCE" language="EtcHosts" extensions="hosts"/>
+        <fileTypeFactory implementation="com.olegstotsky.EtcHostsFileTypeFactory"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
