@@ -25,4 +25,4 @@
 
 Root ::= Item*
 Item ::= Elem | comment
-Elem ::= ip id id?
+Elem ::= ip id id*

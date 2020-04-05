@@ -36,7 +36,7 @@ public class EtcHostsParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // ip id id?
+  // ip id id*
   public static boolean Elem(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "Elem")) return false;
     if (!nextTokenIs(b, IP)) return false;
@@ -48,10 +48,14 @@ public class EtcHostsParser implements PsiParser, LightPsiParser {
     return r;
   }
 
-  // id?
+  // id*
   private static boolean Elem_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "Elem_2")) return false;
-    consumeToken(b, ID);
+    while (true) {
+      int c = current_position_(b);
+      if (!consumeToken(b, ID)) break;
+      if (!empty_element_parsed_guard_(b, "Elem_2", c)) break;
+    }
     return true;
   }
 
