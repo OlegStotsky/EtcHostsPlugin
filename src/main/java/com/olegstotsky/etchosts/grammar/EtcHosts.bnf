@@ -1,0 +1,28 @@
+{
+   parserClass="com.olegstotsky.etchosts.parser.EtcHostsParser"
+
+   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+   psiClassPrefix="EtcHosts"
+   psiImplClassSuffix="Impl"
+   psiPackage="com.olegstotsky.etchosts.psi"
+   psiImplPackage="com.olegstotsky.etchosts.psi.impl"
+
+   elementTypeHolderClass="com.olegstotsky.etchosts.psi.EtcHostsTypes"
+   elementTypeClass="com.olegstotsky.etchosts.psi.EtcHostsElementType"
+   tokenTypeClass="com.olegstotsky.etchosts.psi.EtcHostsTokenType"
+
+   tokens=[
+      SHARP='#'
+
+      space='regexp:\s+'
+      number='regexp:[0-9]+'
+      ip='regexp:(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])'
+      id='regexp:([a-zA-Z0-9][a-zA-Z0-9.\-]*)?[a-zA-Z0-9]'
+      comment='regexp:#[^\r\n]*'
+  ]
+}
+
+Root ::= Item*
+Item ::= Elem | comment
+Elem ::= ip id id?

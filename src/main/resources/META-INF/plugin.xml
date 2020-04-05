@@ -13,6 +13,8 @@
         <fileType name="/etc/hosts file" implementationClass="com.olegstotsky.etchosts.EtcHostsFileType"
                   fieldName="INSTANCE" language="EtcHosts" extensions="hosts"/>
         <fileTypeFactory implementation="com.olegstotsky.etchosts.EtcHostsFileTypeFactory"/>
+        <lang.parserDefinition language="EtcHosts"
+                               implementationClass="com.olegstotsky.etchosts.EtcHostsParserDefinition"/>
     </extensions>
 
     <actions>
