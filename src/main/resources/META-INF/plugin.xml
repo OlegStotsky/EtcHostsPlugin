@@ -10,9 +10,9 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="/etc/hosts file" implementationClass="com.olegstotsky.EtcHostsFileType"
+        <fileType name="/etc/hosts file" implementationClass="com.olegstotsky.etchosts.EtcHostsFileType"
                   fieldName="INSTANCE" language="EtcHosts" extensions="hosts"/>
-        <fileTypeFactory implementation="com.olegstotsky.EtcHostsFileTypeFactory"/>
+        <fileTypeFactory implementation="com.olegstotsky.etchosts.EtcHostsFileTypeFactory"/>
     </extensions>
 
     <actions>

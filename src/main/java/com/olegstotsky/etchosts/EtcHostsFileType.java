@@ -1,4 +1,4 @@
-package com.olegstotsky;
+package com.olegstotsky.etchosts;
 
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import org.jetbrains.annotations.NotNull;
